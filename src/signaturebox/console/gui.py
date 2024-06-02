@@ -25,11 +25,11 @@ class SignBox:
         lab_box = tk.Label(self.root, background='white', width=SIGNBOX_WIDTH, height=SIGNBOX_HEIGH)
 
         button_quit = tk.Button(self.root, text="Quit", command=lambda: self.root.quit()  )
-        button_clear = tk.Button(self.root, text="Clear", command=self.clear)
+        button_clear_pts = tk.Button(self.root, text="Clear", command=self.clear_pts)
         button_rec = tk.Button(self.root, text="Record", command=self.record)
 
         button_quit.pack(side='bottom')
-        button_clear.pack(side='bottom')
+        button_clear_pts.pack(side='bottom')
         button_rec.pack(side='bottom')
         lab_box.pack(side='bottom')
         lab_instr.pack(side='bottom')
@@ -47,7 +47,7 @@ class SignBox:
     def render(self):
         print( f"{len(self.pts)} pts in self.pts")
 
-    def clear(self):
+    def clear_pts(self):
         self.pts = None
 
     def update_pts(self, pts: np.ndarray):
