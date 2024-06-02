@@ -11,7 +11,7 @@ class MouseRecorder:
     def on_click(self,x,y,button,pressed):
 
         if pressed:
-            print( "Clicked!")
+            # print( "Clicked!")
             self.recording = True
 
         if not pressed:
@@ -25,7 +25,7 @@ class MouseRecorder:
 
     def on_move(self,x,y):
         if self.recording:
-            print(f'Pointer moved to {(x,y)}' )
+            # print(f'Pointer moved to {(x,y)}' )
             self.mark(x,y)
 
     def __init__(self):
